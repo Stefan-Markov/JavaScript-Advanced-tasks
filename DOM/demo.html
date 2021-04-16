@@ -1,0 +1,45 @@
+<html>
+<head>
+
+    This is heading
+
+
+    <script>
+        let list = document.createElement("ul");
+        let firstLi = document.createElement("li");
+
+        firstLi.textContent = "Peter";
+        list.appendChild(firstLi);
+        let secondLi = document.createElement("li");
+
+
+        secondLi.innerHTML = "<b>Maria</b>";
+
+        list.appendChild(secondLi);
+        document.body.appendChild(list);
+
+    </script>
+
+</head>
+
+<body>
+
+<table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>95</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+</body>
+</html>
