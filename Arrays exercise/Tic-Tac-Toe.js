@@ -1,8 +1,8 @@
 function TicTacToe(input) {
 
     let dashboard = [[false, false, false],
-    [false, false, false],
-    [false, false, false]];
+        [false, false, false],
+        [false, false, false]];
 
 
     let win = false;
@@ -19,7 +19,7 @@ function TicTacToe(input) {
                 checkRows(dashboard, player) ||
                 checkDiagonals(dashboard, player)) {
 
-                console.log(`Player ${player} wins`)
+                console.log(`Player ${player} wins!`)
                 win = true;
 
                 printDashboard(dashboard);
@@ -42,17 +42,17 @@ function TicTacToe(input) {
     }
 
     function printDashboard(dashboard) {
-        let output = ' --- --- --- \n';
+        let output = '';
         for (let row = 0; row < dashboard.length; row++) {
             for (let col = 0; col < dashboard[row].length; col++) {
 
                 output += dashboard[row][col];
-                output+= " | "
-                output += "";
+                output += "\t"
+                // output += "";
             }
 
-            output += '\n'
-            output+=" --- --- --- "
+            // output += '\n'
+            // output += " --- --- --- "
             output += '\n'
 
 
@@ -101,12 +101,8 @@ function TicTacToe(input) {
             dashboard[2][0] == player) {
             return true;
         }
-
         return false;
     }
-
-
-
 }
 
 

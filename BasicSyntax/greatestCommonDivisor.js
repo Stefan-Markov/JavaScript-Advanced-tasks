@@ -1,6 +1,5 @@
 function greatestCommonDivisor(first, second) {
 
-
     firstNum = Number(first);
     secondNum = Number(second);
 
@@ -18,6 +17,7 @@ function greatestCommonDivisor(first, second) {
     }
     console.log(output);
 }
+
 greatestCommonDivisor(2154, 458);
 
 let gdr = (a, b) => !b ? a : gdr(b, a % b);

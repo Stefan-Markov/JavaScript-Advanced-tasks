@@ -1,6 +1,4 @@
 function spiralMatrix(x, y) {
-
-
     const field = fill(x, y);
 
     let startRow = 0;
@@ -53,4 +51,4 @@ function spiralMatrix(x, y) {
 
 // spiralMatrix(3, 3);
 
-spiralMatrix(5,5);
+spiralMatrix(5, 5);

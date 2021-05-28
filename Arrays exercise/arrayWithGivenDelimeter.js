@@ -1,14 +1,21 @@
-function solve(arr) {
+function solve(arr,delimiter) {
 
-let delimiter = arr.pop();
-console.log(arr.join(delimiter));
-
+    console.log(arr.join(delimiter));
 }
 
 solve(['One',
     'Two',
     'Three',
     'Four',
-    'Five',
-    '-']
+    'Five'],
+    '-'
+);
+
+solve(['How about no?',
+        'I',
+        'will',
+        'not',
+        'do',
+        'it!'],
+    '_'
 );

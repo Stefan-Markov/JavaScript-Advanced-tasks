@@ -1,5 +1,5 @@
-function rotate(array) {
-    let rotations = Number(array.pop()) % array.length;
+function rotate(array,num) {
+    let rotations = Number(num % array.length);
     for (let rotation = 0; rotation < rotations; rotation++) {
         array.unshift(array.pop());
     }
@@ -9,13 +9,13 @@ function rotate(array) {
 console.log(rotate(['1',
     '2',
     '3',
-    '4',
-    '2']
+    '4'],
+    '2'
 ));
 
 console.log(rotate(['Banana',
     'Orange',
     'Coconut',
-    'Apple',
-    '15']
+    'Apple'],
+    '15'
 ));

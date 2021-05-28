@@ -4,24 +4,28 @@ function addRemoveElement(array) {
     for (const command of array) {
         if (command === 'add') {
             result.push(count);
-        }
-        else {
+        } else {
             result.pop();
         }
         count++;
     }
     if (result.length === 0) {
         console.log('Empty');
-    }
-    else {
+    } else {
         console.log(result.join('\n'));
     }
 }
 
-addRemoveElement(['remove', 'remove', 'remove']);
-
+// addRemoveElement(['remove', 'remove', 'remove']);
+//
+// addRemoveElement(['add',
+//     'add',
+//     'add',
+//     'add']
+// );
 addRemoveElement(['add',
     'add',
+    'remove',
     'add',
     'add']
 );

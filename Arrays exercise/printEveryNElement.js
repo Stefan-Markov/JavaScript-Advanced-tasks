@@ -1,24 +1,24 @@
-function printArrNElelent(arr) {
 
-    let step = Number(arr.pop());
-    arr.forEach((num, index) => {
-        if (index % step == 0)
-            console.log(num)
-    });
+    function printArrNElelent(array, n) {
+        let newArr = []
+        for (let i = 0; i < array.length; i += n) {
+            const element = array[i];
+            newArr.push(element);
+        }
+        return newArr;
 }
 
-printArrNElelent(['5',
+console.log(printArrNElelent(['5',
     '20',
     '31',
     '4',
     '20',
     '2']
-);
+));
 
-printArrNElelent(['dsa',
+console.log(printArrNElelent(['dsa',
     'asd',
     'test',
     'tset',
     '2']
-
-);
+));

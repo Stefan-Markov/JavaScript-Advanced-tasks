@@ -1,7 +1,7 @@
 function orbit([width, height, x, y]) {
 
     const field = createField(width, height, x, y);
-    
+
     field.forEach(row => console.log(row.join(' ')));
 
     function createField(width, height, x, y) {
@@ -11,8 +11,7 @@ function orbit([width, height, x, y]) {
             for (let col = 0; col < width; col++) {
                 if (row === x && col === y) {
                     matrix[row].push(1);
-                }
-                else {
+                } else {
                     let value = Math.max((Math.abs(row - x)), Math.abs(col - y)) + 1;
 
                     matrix[row].push(value);
@@ -22,7 +21,6 @@ function orbit([width, height, x, y]) {
         return matrix;
     }
 }
-
 
 
 orbit([5, 5, 0, 0])

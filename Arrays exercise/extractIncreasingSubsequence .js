@@ -3,12 +3,13 @@ function extractSubsequence(arr) {
     let output = [];
     let max = Number.MIN_SAFE_INTEGER;
     arr.forEach(element => {
-        if (max < element) {
+        if (max <= element) {
             max = element;
             output.push(max);
         }
     });
-    console.log(output.join(" "))
+    // console.log(output.join(" "))
+    return output;
 }
 
 extractSubsequence([1,

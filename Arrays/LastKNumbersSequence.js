@@ -3,8 +3,7 @@ function lastKNumbers(n, k) {
     for (let index = 1; index < n; index++) {
         if (index >= k) {
             result.push(result.slice(index - k, index).reduce((a, b) => a + b));
-        }
-        else {
+        } else {
             result.push(result.reduce((a, b) => a + b));
         }
     }

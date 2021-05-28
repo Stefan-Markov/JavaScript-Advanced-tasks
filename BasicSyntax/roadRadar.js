@@ -1,36 +1,54 @@
-function roadRadar([speed, area]) {
+function roadRadar(speed, area) {
+    if(speed < 0){
+        return;
+    }
     let calculateOverLimit = (limit, speed) => {
         if (limit >= speed) {
-            console.log();
             return;
         }
-
         let overLimit = speed - limit;
-
         if (overLimit <= 20) {
-            console.log('speeding');
+            console.log(`The speed is ${overLimit} km/h faster than the allowed speed of 20 - speeding`);
         } else if (overLimit <= 40) {
-            console.log('excessive speeding');
+            console.log(`The speed is ${overLimit} km/h faster than the allowed speed of 90 - excessive speeding`);
         } else if (overLimit > 40) {
-            console.log('reckless driving');
+            console.log(`The speed is ${overLimit} km/h faster than the allowed speed of 130 - reckless driving`);
         }
     }
     switch (area) {
         case 'motorway':
-            calculateOverLimit(130, speed);
+            if (speed <= 130) {
+                console.log(`Driving ${speed} km/h in a 130 zone`)
+            } else {
+                calculateOverLimit(130, speed);
+            }
             break;
         case 'interstate':
-            calculateOverLimit(90, speed);
+            if (speed <= 90) {
+                console.log(`Driving ${speed} km/h in a 90 zone`)
+            } else {
+                calculateOverLimit(90, speed);
+            }
             break;
         case 'city':
-            calculateOverLimit(50, speed);
+
+            if (speed <= 50) {
+                console.log(`Driving ${speed} km/h in a 50 zone`)
+            } else {
+                calculateOverLimit(50, speed);
+            }
             break;
         case 'residential':
-            calculateOverLimit(20, speed);
-            break;
-        default:
+            if (speed <= 20) {
+                console.log(`Driving ${speed} km/h in a 20 zone`)
+            } else {
+                calculateOverLimit(20, speed);
+            }
             break;
     }
 }
-
-roadRadar([21, 'residential']);     // speeding
+roadRadar(-21, 'residential');
+roadRadar(21, 'residential');     // speeding
+roadRadar(120, 'interstate');
+roadRadar(40, 'city');
+roadRadar(200, 'motorway');

@@ -8,3 +8,4 @@ function days (day) {
 
 
 console.log(days('Monday'));
+console.log(days('Friday'));
